@@ -107,7 +107,7 @@ We're going to hook up a simple 2-way bind. We've seen that we've set the body t
 
 First, let's do some simple 2-way binding DOM manipulation. Update your LaunchpadControler div to read as follows:
 
-````html
+```html
 <div ng-controller='LaunchpadControler'>
   <h1>NG Launchpad</h1>
   What's your favorite movie? <input type="text" name="name" value="" ng-model='movieName'>
