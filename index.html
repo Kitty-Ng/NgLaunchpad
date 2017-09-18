@@ -7,13 +7,14 @@
     <script src="scripts/ngLaunchpad.js" charset="utf-8"></script>
   </head>
   <body ng-app='myApp'>
-    <div ng-controller='LaunchpadControler'>
+    <div ng-controller='LaunchpadController as LC'>
       <h1>NG Launchpad</h1>
-      What's your favorite movie? <input type="text" name="name" value="" ng-model='movieName'>
-      <p>Your favorite movie is: {{ movieName }}</p>
-      <button ng-click='getMovieName()'>Get Movie Name</button>
+      What's your favorite movie? <input type="text" name="name" value="" ng-model='LC.movieName'>
+      <p>Your new favorite movie is: {{ LC.movieName }}</p>
+      <button ng-click='LC.getMovieName()'>Add to list</button>
+      <h2>Your favorite movies:</h2>
       <ul>
-        <li ng-repeat='movie in favoriteMovies'>
+        <li ng-repeat='movie in LC.favoriteMovies'>
           {{ movie }}
         </li>
       </ul>
